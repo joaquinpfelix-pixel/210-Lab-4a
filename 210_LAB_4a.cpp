@@ -17,18 +17,22 @@ int main() {
     
     int randomNumber = rand() % 26 + 25;
 
-    FOR (int i = 0; i < randomNumber; i++){
+    for (int i = 0; i < randomNumber; i++){
         Color testColor;
         testColor.red = rand() % 26 +25;
         testColor.green = rand() % 26 +25;
         testColor.blue = rand() % 26 +25;
+        
         colorVector.push_back(testColor);
     }
 
-
-    cout << "Red: " << colorVector[0].red << endl; 
-    cout << "Green: " << colorVector[0].green << endl; 
-    cout << "Blue: " << colorVector[0].blue << endl;
+    for (int i = 0; i < colorVector.size(); i++){
+        cout << "Color " << i << ": "
+             << "R= " << colorVector[i].red << " " 
+             << "G= " << colorVector[i].green << " " 
+            << "B= " << colorVector[i].blue << endl;
+    }
+    
 
 
 }
