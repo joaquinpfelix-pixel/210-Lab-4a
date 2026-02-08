@@ -11,6 +11,9 @@ struct Color {
 
 int main() {
 
-
+    Color testColor = {128, 39, 95};
+    cout << "Red: " << testColor.red  
+         << "Blue: " << testColor.blue 
+         << "Green: " << testColor.green << endl << endl;
 }
 
