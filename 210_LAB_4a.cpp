@@ -5,8 +5,8 @@ using namespace std;
 
 struct Color {
     int red;
-    int blue;
     int green;
+    int blue;
 };
 
 int main() {
