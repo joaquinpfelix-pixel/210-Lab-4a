@@ -17,9 +17,13 @@ int main() {
     colorVector.push_back(testColor);
     
 
-    cout << "Red: " << testColor.red << " " << endl; 
-    cout << "Green: " << testColor.green << " " <<endl; 
-    cout << "Blue: " << testColor.blue << " " << endl;
+
+
+
+    
+    cout << "Red: " << colorVector[0].red << endl; 
+    cout << "Green: " << colorVector[0].green << endl; 
+    cout << "Blue: " << colorVector[0].blue << endl;
 
 
 }
