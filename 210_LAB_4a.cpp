@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <random>
 
 using namespace std;
 
@@ -10,18 +11,23 @@ struct Color {
 };
 
 int main() {
-    srand(time(0)); 
+    random_device rd;
+    mt19937 gen(rd());
+
+    uniform_int_distribution<> countDist(25,50);
+    uniform_int_distribution<> colorDist(0,255);
+
 
     vector<Color> colorVector;
     
     
-    int randomNumber = rand() % 26 + 25;
+    int randomNumber = countDist(gen);
 
     for (int i = 0; i < randomNumber; i++){
         Color testColor;
-        testColor.red = rand() % 26 +25;
-        testColor.green = rand() % 26 +25;
-        testColor.blue = rand() % 26 +25;
+        testColor.red = rand() %256;
+        testColor.green = rand() % 256;
+        testColor.blue = rand() % 256;
         
         colorVector.push_back(testColor);
     }
@@ -34,6 +40,6 @@ int main() {
     }
     
 
-
+    return 0;
 }
 
