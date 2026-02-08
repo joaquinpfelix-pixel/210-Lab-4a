@@ -25,9 +25,9 @@ int main() {
 
     for (int i = 0; i < randomNumber; i++){
         Color testColor;
-        testColor.red = rand() %256;
-        testColor.green = rand() % 256;
-        testColor.blue = rand() % 256;
+        testColor.red = colorDist(gen);
+        testColor.green = colorDist(gen);
+        testColor.blue = colorDist(gen);
         
         colorVector.push_back(testColor);
     }
