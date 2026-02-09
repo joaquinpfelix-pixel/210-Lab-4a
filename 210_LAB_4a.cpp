@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <random>
+#include <iomanip>
+#include <string>
 
 using namespace std;
 
@@ -32,13 +34,22 @@ int main() {
         colorVector.push_back(testColor);
     }
 
-    for (int i = 0; i < colorVector.size(); i++){
-        cout << "Color " << i << ": "
-             << "R= " << colorVector[i].red << " " 
-             << "G= " << colorVector[i].green << " " 
-            << "B= " << colorVector[i].blue << endl;
-    }
+    cout << left << setw(7) << "Color#"
+         << setw(10) << "R value"
+         << setw(10) << "G value"
+         << setw(10) << "B value" << endl;
     
+    cout << string(7, '-') << " "
+         << string(9, '-') << " "
+         << string(9, '-') << " "
+         << string(9, '-') << endl;
+
+    for (int i = 0; i < colorVector.size(); i++){
+        cout << setw(7) << (i+1)
+             << setw(10) << colorVector[i].red
+             << setw(10) << colorVector[i].green 
+             << setw(10) << colorVector[i].blue << endl;
+    }
 
     return 0;
 }
